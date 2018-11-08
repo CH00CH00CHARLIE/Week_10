@@ -21,10 +21,10 @@ app.get("/add/:name", function(req, res) {
 });
 
 app.get("/all", async function(req, res) {
-  const items = await Item.find();
+  const allItems = await Item.find();
   console.log("All Items In The Database");
-  console.log(items);
-  res.send(items);
+  console.log(allItems);
+  res.send(allItems);
 });
 
 app.listen(8000, function() {

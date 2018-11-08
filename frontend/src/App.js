@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   handleDelete = event => {
-    var newTodoList = [...this.state.todos]; 
+    var newTodoList = [...this.state.todos];
     var index = newTodoList.indexOf(event.target.value);
     newTodoList.splice(index, 1);
     this.setState({todos: newTodoList});
@@ -41,6 +41,8 @@ class App extends Component {
             <li key={todo}>
               {todo + " "}
               <button  value={todo} onClick={this.handleDelete}>X</button>
+              Hello World!
+              this.state.todos = newTodoList
             </li>
           </div>
         ))}
